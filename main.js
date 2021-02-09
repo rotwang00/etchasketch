@@ -6,12 +6,17 @@ for (let i = 0; i < size; i++) {
     row.id = "row";
     for (let j = 0; j < size; j++) {
         let div = document.createElement('div');
-        div.innerHTML = i + ", " + j;
+        // div.innerHTML = i + ", " + j;
         div.id = "cell";
+        div.addEventListener("mouseenter", function() {
+            div.style.backgroundColor = "grey";
+            console.log("Hover");
+        });
         row.appendChild(div);
     }
     document.body.appendChild(row);
 }
+
 
 
 // grid[1, 3] = "red";
